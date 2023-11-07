@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter Your Question</title>
+</head>
+<body>
+    <h1>Enter Your Question:</h1>
+    <form method="post" action="{% url 'process_text' %}">
+        {% csrf_token %}
+        <label for="user_question">Question:</label>
+        <input type="text" name="user_question" id="user_question" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
